@@ -20,7 +20,44 @@ struct student {
 	char *name;
 	int score;
 };
+/*
+void swaping(char* str1, char* str2){
+	for (int i = 0; str1[i] != '\0'; i++){
+		char ch = str1[i];
+		str1[i] = str2[i];
+		str2[i] = ch;
+	}
+}
 
+void * scoresAscendingSort(struct student *students, int len) {
+	if (students != NULL && len > 0){
+		if (len == 1){
+			return students;
+		}
+		else{
+			for (int i = 0; i < len; i++){
+				for (int j = i + 1; j < len; j++){
+					if (students[i].score > students[j].score){
+						int temp = students[i].score;
+						students[i].score = students[j].score;
+						students[j].score = temp;
+						swaping(students[i].name, students[j].name);
+					}
+				}
+			}
+			return students;
+		}
+	}
+	else{
+		return NULL;
+	}
+}
+*/
 struct student ** topKStudents(struct student *students, int len, int K) {
+/*	//students = (student*)scoresAscendingSort(students, len);
+	int i = len - K + 1;
+	//
+	*/
 	return NULL;
+	
 }

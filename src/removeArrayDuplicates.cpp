@@ -14,9 +14,45 @@ NOTES: Don't create new array, try to change the input array.
 */
 
 #include <stdio.h>
-
+#include<stdlib.h>
+void sort(int *Arr,int len)
+{
+	int k,temp,l;
+	for (k = 0; k < len; k++)
+	{
+		for (l = 0; l < len; l++)
+		{
+			if (Arr[k] < Arr[l])
+			{
+				temp = Arr[k];
+				Arr[k] = Arr[l];
+				Arr[l] = temp;
+			}
+		}
+	}
+}
 int removeArrayDuplicates(int *Arr, int len)
 {
+	int *temp,i=0,j=0,t;
+	if (Arr == NULL || len <= 0)
+		return -1;
+	else
+	{
+		temp = (int *)calloc(10, sizeof(int));
+		for (i = 0; i < len; i++)
+		{
+			t = Arr[i];
+			if (temp[t] == 0)
+				temp[t]++;
+		}
+		for (i = 0; i <= 9; i++)
+		{
+			if (temp[i] != 0)
+				Arr[j++] = i;
+		}
+		return j;
+	}
 	
+
 	return -1;
 }
