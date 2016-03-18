@@ -47,8 +47,10 @@ int removeArrayDuplicates(int *Arr, int len)
 		}
 		for (i = 0; i <= 9; i++)
 		{
-			if (temp[i] != 0)
-				Arr[j++] = i;
+			if (temp[i] != 0){
+				Arr[j] = i;
+				j++;
+			}
 		}
 		return j;
 	}
